@@ -33,7 +33,7 @@ test('displays message when no products match filter', () => {
   expect(screen.getByText(/no products available/i)).toBeInTheDocument()
 })
 
-test('only adds in-stock items to cart', () => {
+test('adds items to cart', () => {
   render(<App />)
 
   const appleBtn = screen.getByTestId('product-' + sampleProducts.find(i => i.name === 'Apple').id)
@@ -43,8 +43,8 @@ test('only adds in-stock items to cart', () => {
   expect(screen.getByText(/Apple is in your cart/i)).toBeInTheDocument()
 
   const milkBtn = screen.getByTestId('product-' + sampleProducts.find(i => i.name === 'Milk').id)
-  expect(milkBtn).toBeDisabled()
   fireEvent.click(milkBtn)
 
-  expect(screen.queryByText(/Milk is in your cart/i)).not.toBeInTheDocument()
+  expect(screen.getByText(/shopping cart/i)).toBeInTheDocument()
+  expect(screen.getByText(/Milk is in your cart/i)).toBeInTheDocument()
 })
