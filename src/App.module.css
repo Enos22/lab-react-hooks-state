@@ -1,0 +1,19 @@
+.app {
+    min-height: 100vh;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.appLight {
+    background-color: #f9fafb;
+    color: #242420;
+}
+
+.appDark {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.select {
+    margin-left: 0.5rem;
+}
