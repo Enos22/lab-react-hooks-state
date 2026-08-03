@@ -19,7 +19,7 @@ Your task is to implement these features using **React Hooks (`useState`)** whil
 
 ## **Bonus Challenge**
 4. Display a **cart total** showing the number of items added.
-
+z
 ---
 
 ## **Instructions**
